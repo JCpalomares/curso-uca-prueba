@@ -10,7 +10,7 @@ excel_dataframe = openpyxl.load_workbook('datos/top10s.xlsx')
 dataframe = excel_dataframe.active
 
 grafico = 'Si'  # Cambiar a 'Si' para generar gráfico
-tabla = 'Si'  # Cambiar a 'No' para no generar tabla
+tabla = 'No'  # Cambiar a 'No' para no generar tabla
 
 if grafico == 'Si':
     print("Generando gráfico.")
@@ -32,6 +32,7 @@ if grafico == 'Si':
     plt.ylabel('Frecuencia')
     plt.grid(True)
     plt.savefig('hist_popularidad.webp')
+    plt.savefig('hist_popularidad.png')
     plt.show()
 
     if tabla == 'Si':
